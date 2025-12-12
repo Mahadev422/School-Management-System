@@ -22,7 +22,7 @@
 ### How to start frontend
 ```
 npm install
-npm run dev or npm start
+npm run dev
 ```
 ## Backend
 - Express
@@ -34,7 +34,7 @@ npm run dev or npm start
 
 ```
 npm install
-npm run dev
+npm run dev or npm start
 ```
 ## Routes
 - ```/sign-in``` for login
