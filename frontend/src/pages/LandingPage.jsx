@@ -6,30 +6,23 @@ import {
   BarChart3,
   Shield,
   Clock,
-  MessageSquare,
-  CheckCircle,
   ArrowRight,
   ChevronRight,
   Play,
   Star,
-  Award,
   Mail,
   Phone,
   MapPin,
-  Menu,
-  X,
   Facebook,
   Twitter,
   Instagram,
   Linkedin,
-  Download,
   Users2,
   Calendar,
   FileText,
-  Bell,
-  Settings,
-  Search
+  Bell
 } from 'lucide-react';
+import Footer from '../components/layout/Footer';
 
 export default function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -180,10 +173,6 @@ export default function LandingPage() {
                   <Play className="w-5 h-5 mr-2" />
                   Watch Demo
                 </button>
-              </div>
-              <div className="mt-8 flex items-center text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                <span>No credit card required • 30-day free trial</span>
               </div>
             </div>
             
@@ -337,63 +326,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-lg text-gray-600">
-              Choose the perfect plan for your institution
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div 
-                key={index} 
-                className={`rounded-2xl border-2 p-8 ${plan.highlighted ? 'border-blue-500 shadow-xl relative' : 'border-gray-200'}`}
-              >
-                {plan.highlighted && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-600">{plan.description}</p>
-                </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`w-full py-3 rounded-lg font-medium ${
-                  plan.highlighted 
-                    ? 'bg-linear-to-r from-blue-600 to-indigo-700 text-white hover:opacity-90' 
-                    : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50'
-                } transition-opacity`}>
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-linear-to-r from-blue-600 to-indigo-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -425,77 +357,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-linear-to-r from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold">EduManage</span>
-              </div>
-              <p className="text-gray-400">
-                Modern school management solutions for educational institutions of all sizes.
-              </p>
-              <div className="flex space-x-4 mt-6">
-                <a href="#" className="text-gray-400 hover:text-white"><Facebook className="w-5 h-5" /></a>
-                <a href="#" className="text-gray-400 hover:text-white"><Twitter className="w-5 h-5" /></a>
-                <a href="#" className="text-gray-400 hover:text-white"><Instagram className="w-5 h-5" /></a>
-                <a href="#" className="text-gray-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-lg mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Features</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Pricing</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Case Studies</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Updates</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-lg mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Careers</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Press</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-lg mb-4">Contact</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-400">
-                  <Mail className="w-4 h-4 mr-2" />
-                  support@edumanage.com
-                </li>
-                <li className="flex items-center text-gray-400">
-                  <Phone className="w-4 h-4 mr-2" />
-                  +1 (555) 123-4567
-                </li>
-                <li className="flex items-center text-gray-400">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  123 Education St, San Francisco
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">© 2024 EduManage. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-white">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
+      
     </div>
   );
 }
