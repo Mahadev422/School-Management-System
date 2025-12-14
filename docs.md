@@ -5,7 +5,6 @@
 The **School Management System** is a web-based application designed to digitize and automate academic and administrative processes in schools. It provides a centralized platform for students, teachers, and administrators to manage academic data, communication, and daily operations efficiently.
 
 This project is developed as a **hackathon-ready solution**, focusing on scalability, role-based access, and clean architecture.
-
 ---
 
 ## 2. Objectives
@@ -35,7 +34,6 @@ This project is developed as a **hackathon-ready solution**, focusing on scalabi
 * Class and subject management
 * Attendance tracking
 * Responsive UI with Tailwind CSS
-
 ---
 
 ## 5. Tech Stack
@@ -55,7 +53,6 @@ This project is developed as a **hackathon-ready solution**, focusing on scalabi
 * JSON Web Token (JWT)
 * bcryptjs
 * dotenv
-
 ---
 
 ## 6. System Architecture
