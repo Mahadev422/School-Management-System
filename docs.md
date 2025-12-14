@@ -8,7 +8,7 @@ This project is developed as a **hackathon-ready solution**, focusing on scalabi
 
 ---
 
-## 2. Objectives
+## 2.Objectives
 
 * Reduce manual paperwork in school operations
 * Provide role-based access for different stakeholders
