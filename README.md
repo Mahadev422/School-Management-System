@@ -12,12 +12,19 @@
 - React-router-dom (for navigation)
 
 **Frontend [live on](http://localhost:5173)**
+
 ### Features
-- ```/``` for landing page
-- ```/login``` for login page
-- ```student``` for student profile page
-
-
+* ```/``` for landing page
+  - Introduction of our website
+  - How our website works
+  - Functions in our website.
+* ```/login``` for login page
+  - Students or schools admin can login with google login
+  - Create their profile accordingly.
+* ```/student``` for student profile page
+  - Student basic details like name, email, dob, list of schools where he/she had studied and current school.
+- ```/student/school-id``` for viewing school profile
+- ```/ ```
 
 ### How to start frontend
 ```
